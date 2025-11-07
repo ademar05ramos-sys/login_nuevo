@@ -1,0 +1,179 @@
+/* ====== ESTILOS GENERALES ====== */
+body {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url("../img/fondo2.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: #faf5f5;
+
+/*
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;*/
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.activo {
+  border-bottom: 2px solid #ffcc00;
+}
+
+main {
+  padding: 30px;
+}
+
+/* ====== CATÁLOGO INDEX ====== */
+.catalogo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.catalogo article {
+  background: rgb(32, 30, 30);
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.catalogo img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.catalogo h4 {
+  margin: 10px 0;
+  color: #0077cc;
+}
+
+/* ====== PRODUCTOS ====== */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.productos article {
+  background: rgb(31, 29, 29);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.productos img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.productos h3 {
+  margin: 10px 0;
+  color: #0077cc;
+}
+
+.productos span {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #28a745;
+}
+
+button {
+  background: #0077cc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+/* ====== BLOG ====== */
+.entrada {
+  background: rgb(29, 27, 27);
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.entrada img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.entrada h2 {
+  color: #0077cc;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+/* ====== CABECERA CON IMAGEN ====== */
+header {
+  background: url("..//img/targeta\ graf.jpeg") center/cover no-repeat;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); /* oscurece para que el texto resalte */
+}
+
+header h1, header nav {
+  position: relative;
+  z-index: 1; /* asegura que estén sobre el fondo */
+}
+
+/* ====== ANIMACIÓN HOVER PARA LAS TARJETAS ====== */
+.catalogo article,
+.productos article {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalogo article:hover,
+.productos article:hover {
+  transform: scale(1.05); /* aumenta 5% */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
